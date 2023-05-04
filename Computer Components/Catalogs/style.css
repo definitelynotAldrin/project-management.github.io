@@ -1,0 +1,481 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.wrapper{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+    align-items: center;
+    z-index: 1;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+
+
+.header .menu ul{
+    display:flex;
+    gap: 4rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.header .menu ul li{
+    list-style: none;
+    z-index: 1;
+}
+.header .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease-in-out 100ms;
+    font-size: 20px;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+
+.menu ul li a:hover{
+   color: #DE272C;
+   text-shadow: 1px 1px 2px black, 0 0 25px #DE272C, 0 0 5px #DE272C;
+}
+
+.menu ul:hover li a:not(:hover){
+    color: #fff;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+@media only screen and (max-width: 1100px){
+  .header{
+      display: flex;
+  }
+
+
+  .header .menu ul{
+      position: absolute;
+      display:flex;
+      justify-content: flex-end;
+      top: 40%;
+      gap: 1rem;
+  }
+
+  .menu{
+      padding-right: 250px;
+  }
+
+  .header .menu ul li a{
+     font-size: 14px;
+     
+  }
+  
+  .header .logo img{
+      height: 100px;
+  }
+}
+
+
+.image-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    background: #0d0c0c;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+
+.card1 {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 350px;
+    padding-right: 73rem;
+
+  }
+  
+  .card {
+    filter: drop-shadow(0 5px 10px #532020);
+  }
+  
+  .card__content {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 0.875rem;
+  }
+  
+.card__heading {
+      border-radius: 1rem;
+      position: absolute;
+      top: 0;
+      
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #ffffff;
+      transition: opacity 0.3s;
+      padding-top: 40%;
+      text-shadow: -3px 2px 1px #420204;
+      text-align: center;
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.875rem;
+  }
+  
+  /* hover styles */
+  .card:hover .card__reveal {
+    opacity: 1;
+  }
+  
+  .card:hover .card__heading {
+    opacity: 0;
+  }
+  
+  .card__reveal {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2rem;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-decoration: none;
+  }
+  .card__reveal a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) 0%;
+    z-index: 1;
+    border-radius: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.3s;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  
+/*Card2*/
+
+.Card2 {
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transform: translate(430px, -955px);
+  }
+  
+  .card2 {
+    filter: drop-shadow(0 5px 10px #532020);
+  }
+  
+  .card__content2 {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 0.875rem;
+  }
+  
+.card__heading2 {
+      border-radius: 1rem;
+      position: absolute;
+      top: 0;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #ffffff;
+      transition: opacity 0.3s;
+      padding-top: 40%;
+      text-shadow: -3px 2px 1px #420204;
+      text-align: center;
+  }
+  
+  .card__image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.875rem;
+  }
+  
+  /* hover styles */
+  .card2:hover .card__reveal2 {
+    opacity: 1;
+  }
+  
+  .card2:hover .card__heading2 {
+    opacity: 0;
+  }
+  
+  .card__reveal2 {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2rem;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-decoration: none;
+  }
+  .card__reveal2 a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) 0%;
+    z-index: 1;
+    border-radius: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.3s;
+  }
+  
+  .card2:hover::before {
+    opacity: 1;
+  }
+
+
+  /*Card3*/
+
+.Card3 {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transform: translate(815px, -955px);
+
+}
+
+.card3 {
+  filter: drop-shadow(0 5px 10px #532020);
+}
+
+.card__content3 {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 0.875rem;
+}
+
+.card__heading3 {
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #ffffff;
+    transition: opacity 0.3s;
+    padding-top: 40%;
+    text-shadow: -3px 2px 1px #420204;
+    text-align: center;
+}
+
+.card__image3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.875rem;
+}
+
+/* hover styles */
+.card3:hover .card__reveal3 {
+  opacity: 1;
+}
+
+.card3:hover .card__heading3 {
+  opacity: 0;
+}
+
+.card__reveal3 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2rem;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+.card__reveal3 a {
+  text-decoration: none;
+  color: #fff;
+}
+.card3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7) 0%;
+  z-index: 1;
+  border-radius: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.card3:hover::before {
+  opacity: 1;
+}
+
+/*Card4*/
+
+.Card4 {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transform: translate(1205px, -955px);
+}
+
+.card4 {
+  filter: drop-shadow(0 5px 10px #532020);
+}
+
+.card__content4 {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 0.875rem;
+}
+
+.card__heading4 {
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0.7rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #ffffff;
+    transition: opacity 0.3s;
+    padding-top: 40%;
+    text-shadow: -3px 2px 1px #420204;
+    text-align: center;
+}
+
+.card__image4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.875rem;
+}
+
+/* hover styles */
+.card4:hover .card__reveal4 {
+  opacity: 1;
+}
+
+.card4:hover .card__heading4 {
+  opacity: 0;
+}
+
+.card__reveal4 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2rem;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+.card__reveal4 a {
+  text-decoration: none;
+  color: #fff;
+}
+.card4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7) 0%;
+  z-index: 1;
+  border-radius: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.card4:hover::before {
+  opacity: 1;
+}
